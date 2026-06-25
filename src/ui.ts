@@ -1,15 +1,15 @@
 /* eslint-disable prettier/prettier */
 import { Application, Assets, HTMLText, NineSliceSprite, Sprite, Texture } from "pixi.js";
 
-await Assets.load("/assets/ram.png");
-const texture = Texture.from("/assets/ram.png");
+await Assets.load("/src/assets/ram.png");
+const texture = Texture.from("/src/assets/ram.png");
 const uinterface = {
     count: (app: Application): HTMLText => {
         const text = new HTMLText(
             {text: "hello",
                 style: {
                     align: "center",
-                    fontFamily: "/assets/Cinzel-VariableFont_wght.ttf",
+                    fontFamily: "/src/assets/Cinzel-VariableFont_wght.ttf",
                     fontSize: 48,
                     fill: 0xffffff,
                 }
@@ -36,7 +36,7 @@ const uinterface = {
             {text: "hello",
                 style: {
                     align: "center",
-                    fontFamily: "/assets/Cinzel-VariableFont_wght.ttf",
+                    fontFamily: "/src/assets/Cinzel-VariableFont_wght.ttf",
                     fontSize: 48,
                     fill: 0xfff2ac,
                 }
