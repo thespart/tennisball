@@ -57,6 +57,10 @@ export default (_env, argv) => {
     module: {
       rules: [
         {
+          test: /\.(png|svg|jpg|jpeg|gif)$/i,
+          type: 'asset/resource', // да поможет гугл ии
+        },
+        {
           test: /\.ts(x)?$/,
           loader: "ts-loader",
           exclude: /node_modules/,
