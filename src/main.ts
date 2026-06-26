@@ -3,6 +3,7 @@
 import { Application, Graphics, Assets, Sprite } from "pixi.js";
 import { Ball } from "./ball";
 import uinterface from "./ui";
+import racketpng from "/src/assets/racket.png";
 
 (async () => {
   const app = new Application();
@@ -41,7 +42,7 @@ import uinterface from "./ui";
   }
 
   const area = new Graphics().rect(50, 50, 100, 10);
-  const racket = new Sprite(await Assets.load("/src/assets/racket.png"));
+  const racket = new Sprite(await Assets.load(racketpng));
   racket.anchor.set(-1, -0.25);
   const ball = new Ball(0,0,0,{x: 0, y: 0, z: 0}, 0);
   const a = await ball.pixiElement();

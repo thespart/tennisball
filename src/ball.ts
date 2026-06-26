@@ -1,11 +1,11 @@
 /* eslint-disable prettier/prettier */
 import { Graphics, Assets, Sprite} from "pixi.js";
-
+import ballsprite from "/src/assets/ball.png"
 function Randomizer(min: number, max: number) {
     return Math.ceil(Math.random() * (max - min)) + min;
 }
 
-const ball = new Sprite(await Assets.load("/src/assets/ball.png"));
+const ball = new Sprite(await Assets.load(ballsprite));
 ball.anchor = 0.5;
 const shadowball = new Graphics().arc(0, 0, 10, 0, Math.PI*2);
 const fallspeed = 0.5;
